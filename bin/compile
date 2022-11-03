@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -euo pipefail
+
+BUILD_DIR="$1"
+CACHE_DIR="$2"
+
+echo "-----> Writing out SOURCE_VERSION to .revision ($SOURCE_VERSION)"
+echo "$SOURCE_VERSION" > "${BUILD_DIR}/.revision"
+chmod 0644 "${BUILD_DIR}/.revision"
